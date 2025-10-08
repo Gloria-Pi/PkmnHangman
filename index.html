@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>06 Enhanced Pokémon Guesser</title>
+
+    <meta name="description" content="My attempt at solving exercise 06 Enhanced Word Guesser">
+    <meta name="author" content="Gloria Paita">
+
+    <!-- font-family: 'Jersey 15'; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="hgroup">
+            <hgroup>
+                <h1>Enhanced Pokémon Guesser</h1>
+                <p class="h2">And now with a second player!</p>
+            </hgroup>
+        </div>
+    </header>
+
+    <!-- Start Screen -->
+    <section id="start-screen" class="fade">
+        <div id="player1-starting-screen">
+            <label for="player1-name-input">PLAYER 1</label>
+            <input type="text" id="player1-name-input" placeholder="Enter your name, Player 1">
+        </div>
+        <div id="player2-starting-screen">
+            <label for="player2-name-input">PLAYER 2</label>
+            <input type="text" id="player2-name-input" placeholder="Enter your name, Player 2">
+        </div>
+        <button id="game-start-button">START GAME</button>
+    </section>
+
+    <!-- Game Interface -->
+    <section id="game-section" class="hidden fade">
+
+        <section id="player1-section">
+            <div id="player1-score">
+                <p class="section-title"><span class="player1-name">Trainer 1</span>'s Badge Count:</p>
+                <p id="p1-score" class="section-title">0</p>
+            </div>
+            <div class="player-input-div">
+                <label for="player1-input" class="section-title">Catch a letter:</label>
+                <input type="text" maxlength="1" pattern="[A-Za-z]" id="player1-input" name="player1-input">
+            </div>
+            <div class="picked-word-div">
+                <p></p>
+            </div>
+
+            <section id="p1-hangman-section">
+                <div class="hangman-div">
+                    <div id="p1-hangman-tries">
+                        <img id="p1-hangman" src="./assets/img/hangman-stages/hangman-start.png"
+                            alt="The current stage of the hangman.">
+                        <p class="remaining-tries"></p>
+                    </div>
+                    <div id="p1-guessed-letters-div">
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="player2-section">
+            <div id="player2-score">
+                <p class="section-title"><span class="player2-name">Trainer 2</span>'s Badge Count:</p>
+                <p id="p2-score" class="section-title">0</p>
+            </div>
+            <div class="player-input-div">
+                <label for="player2-input" class="section-title">Catch a letter:</label>
+                <input type="text" maxlength="1" pattern="[A-Za-z]" id="player2-input" name="player2-input">
+            </div>
+            <div class="picked-word-div">
+                <p></p>
+            </div>
+
+            <section id="p2-hangman-section">
+                <div class="hangman-div">
+                    <div id="p2-hangman-tries">
+                        <img id="p2-hangman" src="./assets/img/hangman-stages/hangman-start.png"
+                            alt="The current stage of the hangman.">
+                        <p class="remaining-tries"></p>
+                    </div>
+                    <div id="p2-guessed-letters-div">
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="narration-section">
+            <div id="p1-narration-div">
+                <p>Welcome to the Pokémon world, <span class="player1-name"></span>!</p>
+            </div>
+            <div id="buttons">
+                <button id="continue-button">Rematch</button>
+                <button id="reset-button">Reset</button>
+            </div>
+            <div id="p2-narration-div">
+                <p>Welcome to the Pokémon world, <span class="player2-name"></span>!</p>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer-div">
+            <p>Copyright © 2025 Gloria Paita</p>
+        </div>
+    </footer>
+
+    <!-- end of the body -->
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

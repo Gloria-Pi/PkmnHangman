@@ -1,0 +1,425 @@
+* {
+    box-sizing: border-box;
+}
+
+/* RESETTING THE DEFAULTS */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* ------- BEGINNING OF PERSONAL CSS RULES ------- */
+
+html {
+    font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 2rem;
+    height: 100%;
+    flex: 1;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    color: whitesmoke;
+}
+
+hgroup,
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer {
+    width: 100%;
+    min-height: 5vh;
+    background-color: black;
+    color: whitesmoke;
+    line-height: 5vh;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.h2 {
+    font-size: 2.2rem;
+    font-weight: lighter;
+}
+
+/* ------- STARTING SCREEN ------- */
+
+#start-screen {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#player1-starting-screen,
+#player2-starting-screen {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 6px;
+}
+
+#player1-starting-screen > label,
+#player2-starting-screen > label {
+    padding-left: 12px;
+    font-size: 3rem;
+}
+
+#player1-starting-screen > input,
+#player2-starting-screen > input {
+    padding: 20px 25px;
+    border-radius: 25px;
+    font-family: "Jersey 15", sans-serif;
+    border: none;
+    font-size: 1.6rem;
+}
+
+.fade {
+    transition: opacity 1.5s ease-in;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* ------- GAME INTERFACE ------- */
+
+#game-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    height: 90vh;
+    padding: 20px 0;
+    background-color: #303030;
+    flex: 1;
+}
+
+/* ------- UPPER SECTION ------- */
+
+#player1-section,
+#player2-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px; 
+    width: 400px;
+    background-color: #F5F5F5;
+    box-shadow: rgba(0, 0, 0, 0.685) 0px 0px 10px;
+    border-radius: 25px;
+    min-height: 67vh;
+}
+
+#player1-score,
+#player2-score {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.player1-name,
+.player2-name {
+    color: #0DA675;
+}
+
+#narration-section .player1-name,
+#narration-section .player2-name {
+    color: #ff9;
+}
+
+#p1-score,
+#p2-score {
+    color: #E9725B;
+}
+
+.section-title {
+    font-size: 2.3rem;
+    font-weight: lighter;
+}
+
+.player-input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#player1-input,
+#player2-input {
+    max-height: 75px;
+    aspect-ratio: 1;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border: #282828 3px solid;
+    border-radius: 50px;
+    background-image: url("../assets/img/pokeball-black.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#player1-input:disabled,
+#player2-input:disabled {
+    background-color: #616161;
+    filter: opacity(13%);
+    cursor:not-allowed;
+}
+
+.picked-word-div {
+    margin-top: -10px;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 8px;
+    padding: 5px;
+    font-size: 4rem;
+    font-weight: lighter;
+}
+
+.hangman-div{
+    display: flex;
+    column-gap: 50px;
+    margin-left: -25px;
+}
+
+#p1-hangman-tries,
+#p2-hangman-tries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+#p1-hangman,
+#p2-hangman {
+    max-height: 160px;
+    border-radius: 25px;
+}
+
+.remaining-tries {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    max-width: 190px;
+    height: 60px;
+    letter-spacing: 3px;
+    font-size: 2.8rem;
+    color: #E9725B;
+}
+
+#p1-guessed-letters-div,
+#p2-guessed-letters-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    color: #0c9267;
+}
+
+/* ------- BOTTOM SECTION ------- */
+
+#narration-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin: 0px 35px;
+}
+
+#p1-narration-div,
+#p2-narration-div {
+    text-align: center;
+    background-color: #0c9267;
+    color:#282828;
+    border-radius: 20px;
+    padding: 20px 30px;
+    max-width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.622) 0px 0px 10px;
+}
+
+/* ------- BUTTONS ------- */
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#game-start-button,
+#continue-button,
+#reset-button {
+    width: 115px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#game-start-button:hover,
+#continue-button:hover,
+#reset-button:hover {
+    filter: brightness(1.2);
+    border-color:#a85140;
+    box-shadow: none;
+}
+
+#game-start-button:disabled,
+#continue-button:disabled,
+#reset-button:disabled {
+    opacity: 0.5;
+    cursor:not-allowed;
+}
+
+#game-start-button {
+    margin-top: 5px;
+    background-color: rgb(207, 179, 1);
+    font-weight: bold;
+}
+
+#continue-button {
+    background-color: rgba(235, 235, 235, 0.987);
+    box-shadow: 0px 0px 3px white;
+    border: solid 3px black;
+    color: black;
+}
+
+#reset-button {
+    background-color: #282828;
+    box-shadow: 0px 0px 3px black;
+    border: solid 2px rgba(235, 235, 235, 0.987);
+    color: white;
+}
