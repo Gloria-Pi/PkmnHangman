@@ -1,26 +1,10 @@
-# 06 Enhanced Word Guesser - Bonus Version
+# A Pokémon Hangman Game - Competitive Version
 
 # Author
 
 **Author**: Gloria Paita  
 **Email**: gloria.paita@edu-its.it  
 **Course**: Web Developer 2024-2026  
-
-<br>
-
-# Assignment
-
-- Begin with the 'Word Guesser' exercise from a previous lesson
-- Incorporate the following enhancements
-    - Implement an interface to allow users to input letters via an HTML `<input>` element
-        - Integrate additional necessary HTML elements
-        - Validate user input to ensure it consists of a single character and is of the correct type
-    - Enhance the visual presentation of game results directly on the page
-        - This can include the utilization of images or other graphics to enrich the experience
-        - Display previous guesses, the remaining number of guesses, and other pertinent information to the user
-    - Add additional features that would augment the game's appeal and interactivity
-
-**Bonus Challenge**: Develop a 2-player version of the game to further engage users in a competitive gameplay experience
 
 <br>
 <br>
@@ -31,7 +15,7 @@
 
 The initial logic was adapted from a single-player version of Hangman.
 
-Please refer to this [README](../solution/readme.md) for more information about the code structure.
+Please refer to the previous readme (readme.md) for more information about the code structure.
 
 The key features added include:
 
